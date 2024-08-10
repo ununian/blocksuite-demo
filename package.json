@@ -1,0 +1,25 @@
+{
+  "name": "blocksuite-demo",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "server": "rimraf dist && tsup --sourcemap inline --watch --onSuccess 'node dist/esm/index.js'",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3",
+    "vite": "^5.4.0"
+  },
+  "dependencies": {
+    "@blocksuite/blocks": "^0.16.0",
+    "@blocksuite/presets": "^0.16.0",
+    "@blocksuite/store": "^0.16.0",
+    "@hocuspocus/extension-sqlite": "^2.13.5",
+    "@hocuspocus/provider": "^2.13.5",
+    "@hocuspocus/server": "^2.13.5",
+    "y-indexeddb": "^9.0.12"
+  }
+}
