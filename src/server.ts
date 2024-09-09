@@ -21,7 +21,7 @@ const server = Server.configure({
   },
   onLoadDocument: async (payload) => {
     const { documentName } = payload;
-    const path = `./data/${documentName}.yjs`;
+    const path = `../data/${documentName}.yjs`;
 
     if (fs.existsSync(path)) {
       const doc = new Y.Doc();
@@ -35,7 +35,7 @@ const server = Server.configure({
   },
   onStoreDocument: async (payload) => {
     const { documentName, document } = payload;
-    const path = `./data/${documentName}.yjs`;
+    const path = `../data/${documentName}.yjs`;
 
     const update = Y.encodeStateAsUpdate(document);
     fs.writeFileSync(path, update);
